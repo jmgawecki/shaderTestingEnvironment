@@ -12,7 +12,6 @@
 #if defined(__METAL_VERSION__)
 
 #include <RealityKit/RealityKit.h>
-#include <RealityKit/RealityKitTextures.h>
 
 #include <metal_stdlib>
 #include <metal_types>

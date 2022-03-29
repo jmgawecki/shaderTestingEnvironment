@@ -11,17 +11,27 @@
 using namespace metal;
 
 [[visible]]
-void geometryModifier(realitykit::geometry_parameters params)
+void triangleDancerModifier(realitykit::geometry_parameters params)
 {
     float3 localPosition = params.geometry().model_position();
     
     float offsetMultiplier = sin(params.uniforms().time() * 1.2);
+    float offsetOppositeMultiplier = cos(params.uniforms().time() * 1.2);
     
-//    if (localPosition.y > 0)
-//    {
+    if (localPosition.x > 0)
+    {
         params.geometry().set_model_position_offset(
                                                     float3(localPosition.x * offsetMultiplier, 0, localPosition.z * offsetMultiplier)
                                                     );
-//    }
+    }
+    
+    if (localPosition.x < 0)
+    {
+        params.geometry().set_model_position_offset(
+                                                    float3(localPosition.x * offsetOppositeMultiplier, 0, localPosition.z * offsetOppositeMultiplier)
+                                                    );
+    }
+    
+    
 }
 

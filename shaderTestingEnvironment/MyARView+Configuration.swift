@@ -12,6 +12,10 @@ extension MyARView {
         let configuration = ARWorldTrackingConfiguration()
         configuration.planeDetection = [.horizontal]
         
+        if ARWorldTrackingConfiguration.supportsFrameSemantics(.personSegmentationWithDepth) {
+            configuration.frameSemantics = [.personSegmentationWithDepth]
+        }
+        
         session.run(configuration)
     }
 }

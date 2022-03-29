@@ -18,8 +18,7 @@ void greenShader(realitykit::surface_parameters params)
     params.surface().set_base_color(half3(0.094, 0.697, 0.088));
     params.surface().set_roughness(0.9);
     
-    // animate the opacity over time based on sin value
-    float intensity = sin(params.uniforms().time());
-    params.surface().set_opacity(intensity/2 + 0.2);
+    // animate the opacity over time based on sin value    
+    pulsingShader(params);
 }
 

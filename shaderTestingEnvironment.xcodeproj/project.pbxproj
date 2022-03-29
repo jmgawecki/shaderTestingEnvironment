@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EF9E4CAE27F3434C00A775E8 /* geometryModifier.metal in Sources */ = {isa = PBXBuildFile; fileRef = EF9E4CAD27F3434C00A775E8 /* geometryModifier.metal */; };
+		EF9E4CAE27F3434C00A775E8 /* triangleDancerModifier.metal in Sources */ = {isa = PBXBuildFile; fileRef = EF9E4CAD27F3434C00A775E8 /* triangleDancerModifier.metal */; };
+		EF9E4CB027F34DB600A775E8 /* expandingSquareModifier.metal in Sources */ = {isa = PBXBuildFile; fileRef = EF9E4CAF27F34DB600A775E8 /* expandingSquareModifier.metal */; };
+		EF9E4CB227F34F0900A775E8 /* MetalShaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9E4CB127F34F0900A775E8 /* MetalShaders.swift */; };
+		EF9E4CB427F38A6100A775E8 /* wireframeShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = EF9E4CB327F38A6100A775E8 /* wireframeShader.metal */; };
 		EFAF2A4A27F32F43002E7411 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAF2A4927F32F43002E7411 /* AppDelegate.swift */; };
 		EFAF2A4C27F32F43002E7411 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAF2A4B27F32F43002E7411 /* ContentView.swift */; };
 		EFAF2A5027F32F44002E7411 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFAF2A4F27F32F44002E7411 /* Assets.xcassets */; };
@@ -19,8 +22,28 @@
 		EFAF2A6227F335A3002E7411 /* greenShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = EFAF2A6127F335A3002E7411 /* greenShader.metal */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXBuildRule section */
+		EF9E4CB727F38F5D00A775E8 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			filePatterns = "*.ci.metal";
+			fileType = pattern.proxy;
+			inputFiles = (
+			);
+			isEditable = 1;
+			outputFiles = (
+				"$(DERIVED_FILE_DIR)/$(INPUT_FILE_BASE).air",
+			);
+			runOncePerArchitecture = 0;
+			script = "# Type a script or drag a script file from your workspace to insert its path.\nxcrun metal -c -I $MTL_HEADER_SEARCH_PATHS -fcikernel \"${INPUT_FILE_PATH}\" -o \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+		};
+/* End PBXBuildRule section */
+
 /* Begin PBXFileReference section */
-		EF9E4CAD27F3434C00A775E8 /* geometryModifier.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = geometryModifier.metal; sourceTree = "<group>"; };
+		EF9E4CAD27F3434C00A775E8 /* triangleDancerModifier.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = triangleDancerModifier.metal; sourceTree = "<group>"; };
+		EF9E4CAF27F34DB600A775E8 /* expandingSquareModifier.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = expandingSquareModifier.metal; sourceTree = "<group>"; };
+		EF9E4CB127F34F0900A775E8 /* MetalShaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalShaders.swift; sourceTree = "<group>"; };
+		EF9E4CB327F38A6100A775E8 /* wireframeShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = wireframeShader.metal; sourceTree = "<group>"; };
 		EFAF2A4627F32F43002E7411 /* shaderTestingEnvironment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shaderTestingEnvironment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFAF2A4927F32F43002E7411 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFAF2A4B27F32F43002E7411 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -88,9 +111,11 @@
 		EFAF2A6427F342EE002E7411 /* Surface Shader */ = {
 			isa = PBXGroup;
 			children = (
+				EF9E4CB327F38A6100A775E8 /* wireframeShader.metal */,
 				EFAF2A5F27F33537002E7411 /* pulsingShader.metal */,
 				EFAF2A6327F3362A002E7411 /* pulsingShader.h */,
 				EFAF2A6127F335A3002E7411 /* greenShader.metal */,
+				EF9E4CB127F34F0900A775E8 /* MetalShaders.swift */,
 			);
 			path = "Surface Shader";
 			sourceTree = "<group>";
@@ -98,7 +123,8 @@
 		EFAF2A6527F34306002E7411 /* Geometry Modifier */ = {
 			isa = PBXGroup;
 			children = (
-				EF9E4CAD27F3434C00A775E8 /* geometryModifier.metal */,
+				EF9E4CAD27F3434C00A775E8 /* triangleDancerModifier.metal */,
+				EF9E4CAF27F34DB600A775E8 /* expandingSquareModifier.metal */,
 			);
 			path = "Geometry Modifier";
 			sourceTree = "<group>";
@@ -115,6 +141,7 @@
 				EFAF2A4427F32F43002E7411 /* Resources */,
 			);
 			buildRules = (
+				EF9E4CB727F38F5D00A775E8 /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -173,10 +200,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF9E4CB227F34F0900A775E8 /* MetalShaders.swift in Sources */,
+				EF9E4CB427F38A6100A775E8 /* wireframeShader.metal in Sources */,
 				EFAF2A6227F335A3002E7411 /* greenShader.metal in Sources */,
 				EFAF2A5E27F33361002E7411 /* MyARView+ARSessionDelegate.swift in Sources */,
-				EF9E4CAE27F3434C00A775E8 /* geometryModifier.metal in Sources */,
+				EF9E4CAE27F3434C00A775E8 /* triangleDancerModifier.metal in Sources */,
 				EFAF2A4C27F32F43002E7411 /* ContentView.swift in Sources */,
+				EF9E4CB027F34DB600A775E8 /* expandingSquareModifier.metal in Sources */,
 				EFAF2A5A27F32F73002E7411 /* MyARView.swift in Sources */,
 				EFAF2A6027F33537002E7411 /* pulsingShader.metal in Sources */,
 				EFAF2A5C27F332CD002E7411 /* MyARView+Configuration.swift in Sources */,

@@ -27,17 +27,13 @@ class MyARView: ARView {
             classification: .floor,
             minimumBounds: [0.5, 0.5]
         )
-        plane?.model?.materials = [SimpleMaterial(color: .cyan, isMetallic: true)]
         
-        if let surfaceShader = generateSurfaceShader(),
-        let geometryModifier = generateGeometryModifier() {
-            do {
-                let customMaterial = try CustomMaterial(surfaceShader: surfaceShader,
-                                                        geometryModifier: geometryModifier,
-                                                        lightingModel: .lit)
-                
-                plane?.model?.materials = [customMaterial]
-            } catch {}
+        do {
+            if let material = try createCustomMaterialWithShader() {
+                plane?.model?.materials = [material]
+            }
+        } catch {
+            plane?.model?.materials = [SimpleMaterial(color: .cyan, isMetallic: true)]
         }
         
         scene.addAnchor(anchor!)
@@ -52,26 +48,51 @@ class MyARView: ARView {
         fatalError("init(frame:) has not been implemented")
     }
     
-    
-    fileprivate func generateSurfaceShader() -> CustomMaterial.SurfaceShader? {
+    // MARK: - Metal
+    fileprivate func generateSurfaceShader(_ shader: CustomSurfaceShader) -> CustomMaterial.SurfaceShader? {
         guard
             let device = MTLCreateSystemDefaultDevice(),
             let library = device.makeDefaultLibrary()
         else { return nil }
         
-        return CustomMaterial.SurfaceShader(named: "greenShader", in: library)
+        return CustomMaterial.SurfaceShader(named: shader.rawValue, in: library)
     }
     
-    fileprivate func generateGeometryModifier() -> CustomMaterial.GeometryModifier? {
+    fileprivate func generateGeometryModifier(_ modifier: CustomGeometryModifier) -> CustomMaterial.GeometryModifier? {
         guard
             let device = MTLCreateSystemDefaultDevice(),
             let library = device.makeDefaultLibrary()
         else { return nil }
         
-        return CustomMaterial.GeometryModifier(named: "geometryModifier", in: library)
+        return CustomMaterial.GeometryModifier(named: modifier.rawValue, in: library)
     }
     
+    // MARK: - Custom Material
     
+    fileprivate func createCustomMaterialWithShaderAndModifier() throws -> CustomMaterial? {
+        guard
+            let surfaceShader = generateSurfaceShader(.greenShader),
+            let geometryModifier = generateGeometryModifier(.triangleDancer)
+        else { return nil }
+        
+        return try CustomMaterial(
+            surfaceShader: surfaceShader,
+            geometryModifier: geometryModifier,
+            lightingModel: .lit
+        )
+    }
+    
+    fileprivate func createCustomMaterialWithShader() throws -> CustomMaterial? {
+        guard let surfaceShader = generateSurfaceShader(.wireframeShader)
+        else { return nil }
+        
+        return try CustomMaterial(
+            surfaceShader: surfaceShader,
+            lightingModel: .lit
+        )
+    }
+    
+    // MARK: - Raycast
     func raycastCentreView() -> ARRaycastResult? {
         raycast(
             from: CGPoint.init(

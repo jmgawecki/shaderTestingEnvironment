@@ -6,12 +6,11 @@
 //
 
 #include <metal_stdlib>
+#include "pulsingShader.h"
 #include <RealityKit/RealityKit.h>
 
-using namespace metal;
+using namespace realitykit;
 
-
-[[visible]]
 void pulsingShader(realitykit::surface_parameters params)
 {
     float intensity = sin(params.uniforms().time());
