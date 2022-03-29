@@ -7,20 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF9E4CAE27F3434C00A775E8 /* geometryModifier.metal in Sources */ = {isa = PBXBuildFile; fileRef = EF9E4CAD27F3434C00A775E8 /* geometryModifier.metal */; };
 		EFAF2A4A27F32F43002E7411 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAF2A4927F32F43002E7411 /* AppDelegate.swift */; };
 		EFAF2A4C27F32F43002E7411 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAF2A4B27F32F43002E7411 /* ContentView.swift */; };
-		EFAF2A4E27F32F43002E7411 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = EFAF2A4D27F32F43002E7411 /* Experience.rcproject */; };
 		EFAF2A5027F32F44002E7411 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFAF2A4F27F32F44002E7411 /* Assets.xcassets */; };
 		EFAF2A5327F32F44002E7411 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFAF2A5227F32F44002E7411 /* Preview Assets.xcassets */; };
+		EFAF2A5A27F32F73002E7411 /* MyARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAF2A5927F32F73002E7411 /* MyARView.swift */; };
+		EFAF2A5C27F332CD002E7411 /* MyARView+Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAF2A5B27F332CD002E7411 /* MyARView+Configuration.swift */; };
+		EFAF2A5E27F33361002E7411 /* MyARView+ARSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAF2A5D27F33361002E7411 /* MyARView+ARSessionDelegate.swift */; };
+		EFAF2A6027F33537002E7411 /* pulsingShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = EFAF2A5F27F33537002E7411 /* pulsingShader.metal */; };
+		EFAF2A6227F335A3002E7411 /* greenShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = EFAF2A6127F335A3002E7411 /* greenShader.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF9E4CAD27F3434C00A775E8 /* geometryModifier.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = geometryModifier.metal; sourceTree = "<group>"; };
 		EFAF2A4627F32F43002E7411 /* shaderTestingEnvironment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shaderTestingEnvironment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFAF2A4927F32F43002E7411 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFAF2A4B27F32F43002E7411 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		EFAF2A4D27F32F43002E7411 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		EFAF2A4F27F32F44002E7411 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFAF2A5227F32F44002E7411 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EFAF2A5927F32F73002E7411 /* MyARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyARView.swift; sourceTree = "<group>"; };
+		EFAF2A5B27F332CD002E7411 /* MyARView+Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyARView+Configuration.swift"; sourceTree = "<group>"; };
+		EFAF2A5D27F33361002E7411 /* MyARView+ARSessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyARView+ARSessionDelegate.swift"; sourceTree = "<group>"; };
+		EFAF2A5F27F33537002E7411 /* pulsingShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = pulsingShader.metal; sourceTree = "<group>"; };
+		EFAF2A6127F335A3002E7411 /* greenShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = greenShader.metal; sourceTree = "<group>"; };
+		EFAF2A6327F3362A002E7411 /* pulsingShader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pulsingShader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,9 +64,13 @@
 		EFAF2A4827F32F43002E7411 /* shaderTestingEnvironment */ = {
 			isa = PBXGroup;
 			children = (
+				EFAF2A6527F34306002E7411 /* Geometry Modifier */,
+				EFAF2A6427F342EE002E7411 /* Surface Shader */,
 				EFAF2A4927F32F43002E7411 /* AppDelegate.swift */,
 				EFAF2A4B27F32F43002E7411 /* ContentView.swift */,
-				EFAF2A4D27F32F43002E7411 /* Experience.rcproject */,
+				EFAF2A5927F32F73002E7411 /* MyARView.swift */,
+				EFAF2A5B27F332CD002E7411 /* MyARView+Configuration.swift */,
+				EFAF2A5D27F33361002E7411 /* MyARView+ARSessionDelegate.swift */,
 				EFAF2A4F27F32F44002E7411 /* Assets.xcassets */,
 				EFAF2A5127F32F44002E7411 /* Preview Content */,
 			);
@@ -68,6 +83,24 @@
 				EFAF2A5227F32F44002E7411 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EFAF2A6427F342EE002E7411 /* Surface Shader */ = {
+			isa = PBXGroup;
+			children = (
+				EFAF2A5F27F33537002E7411 /* pulsingShader.metal */,
+				EFAF2A6327F3362A002E7411 /* pulsingShader.h */,
+				EFAF2A6127F335A3002E7411 /* greenShader.metal */,
+			);
+			path = "Surface Shader";
+			sourceTree = "<group>";
+		};
+		EFAF2A6527F34306002E7411 /* Geometry Modifier */ = {
+			isa = PBXGroup;
+			children = (
+				EF9E4CAD27F3434C00A775E8 /* geometryModifier.metal */,
+			);
+			path = "Geometry Modifier";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,9 +173,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFAF2A6227F335A3002E7411 /* greenShader.metal in Sources */,
+				EFAF2A5E27F33361002E7411 /* MyARView+ARSessionDelegate.swift in Sources */,
+				EF9E4CAE27F3434C00A775E8 /* geometryModifier.metal in Sources */,
 				EFAF2A4C27F32F43002E7411 /* ContentView.swift in Sources */,
+				EFAF2A5A27F32F73002E7411 /* MyARView.swift in Sources */,
+				EFAF2A6027F33537002E7411 /* pulsingShader.metal in Sources */,
+				EFAF2A5C27F332CD002E7411 /* MyARView+Configuration.swift in Sources */,
 				EFAF2A4A27F32F43002E7411 /* AppDelegate.swift in Sources */,
-				EFAF2A4E27F32F43002E7411 /* Experience.rcproject in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +306,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"shaderTestingEnvironment/Preview Content\"";
@@ -299,6 +338,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"shaderTestingEnvironment/Preview Content\"";
