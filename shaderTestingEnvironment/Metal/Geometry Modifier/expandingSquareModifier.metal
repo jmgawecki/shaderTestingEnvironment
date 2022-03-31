@@ -23,8 +23,8 @@ void expandingSquareModifier(realitykit::geometry_parameters params)
         offset *= -1;
     }
     
-    params.geometry().set_model_position_offset(
-                                                float3(localPosition.x * offset, 0, localPosition.z * offset)
-                                                );    
+    float3 updatedPosition = float3(localPosition.x * offset, 0, localPosition.z * offset);
+    
+    params.geometry().set_model_position_offset(updatedPosition);    
 }
 

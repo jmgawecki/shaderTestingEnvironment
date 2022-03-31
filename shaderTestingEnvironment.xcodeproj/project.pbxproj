@@ -10,7 +10,8 @@
 		EF9E4CAE27F3434C00A775E8 /* triangleDancerModifier.metal in Sources */ = {isa = PBXBuildFile; fileRef = EF9E4CAD27F3434C00A775E8 /* triangleDancerModifier.metal */; };
 		EF9E4CB027F34DB600A775E8 /* expandingSquareModifier.metal in Sources */ = {isa = PBXBuildFile; fileRef = EF9E4CAF27F34DB600A775E8 /* expandingSquareModifier.metal */; };
 		EF9E4CB227F34F0900A775E8 /* MetalShaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9E4CB127F34F0900A775E8 /* MetalShaders.swift */; };
-		EF9E4CB427F38A6100A775E8 /* wireframeShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = EF9E4CB327F38A6100A775E8 /* wireframeShader.metal */; };
+		EF9E4CB427F38A6100A775E8 /* staticWireframeShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = EF9E4CB327F38A6100A775E8 /* staticWireframeShader.metal */; };
+		EF9E4CB927F3A26F00A775E8 /* wireframeShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = EF9E4CB827F3A26F00A775E8 /* wireframeShader.metal */; };
 		EFAF2A4A27F32F43002E7411 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAF2A4927F32F43002E7411 /* AppDelegate.swift */; };
 		EFAF2A4C27F32F43002E7411 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAF2A4B27F32F43002E7411 /* ContentView.swift */; };
 		EFAF2A5027F32F44002E7411 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFAF2A4F27F32F44002E7411 /* Assets.xcassets */; };
@@ -20,6 +21,9 @@
 		EFAF2A5E27F33361002E7411 /* MyARView+ARSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAF2A5D27F33361002E7411 /* MyARView+ARSessionDelegate.swift */; };
 		EFAF2A6027F33537002E7411 /* pulsingShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = EFAF2A5F27F33537002E7411 /* pulsingShader.metal */; };
 		EFAF2A6227F335A3002E7411 /* greenShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = EFAF2A6127F335A3002E7411 /* greenShader.metal */; };
+		EFC504A827F5A8D000E0299C /* grassGreenShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = EFC504A727F5A8D000E0299C /* grassGreenShader.metal */; };
+		EFC504AC27F5CBEB00E0299C /* grassWindModifier.metal in Sources */ = {isa = PBXBuildFile; fileRef = EFC504AB27F5CBEB00E0299C /* grassWindModifier.metal */; };
+		EFC504AE27F5D45A00E0299C /* MyARView+Coaching.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC504AD27F5D45A00E0299C /* MyARView+Coaching.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -43,7 +47,8 @@
 		EF9E4CAD27F3434C00A775E8 /* triangleDancerModifier.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = triangleDancerModifier.metal; sourceTree = "<group>"; };
 		EF9E4CAF27F34DB600A775E8 /* expandingSquareModifier.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = expandingSquareModifier.metal; sourceTree = "<group>"; };
 		EF9E4CB127F34F0900A775E8 /* MetalShaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalShaders.swift; sourceTree = "<group>"; };
-		EF9E4CB327F38A6100A775E8 /* wireframeShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = wireframeShader.metal; sourceTree = "<group>"; };
+		EF9E4CB327F38A6100A775E8 /* staticWireframeShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = staticWireframeShader.metal; sourceTree = "<group>"; };
+		EF9E4CB827F3A26F00A775E8 /* wireframeShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = wireframeShader.metal; sourceTree = "<group>"; };
 		EFAF2A4627F32F43002E7411 /* shaderTestingEnvironment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shaderTestingEnvironment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFAF2A4927F32F43002E7411 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFAF2A4B27F32F43002E7411 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,6 +60,9 @@
 		EFAF2A5F27F33537002E7411 /* pulsingShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = pulsingShader.metal; sourceTree = "<group>"; };
 		EFAF2A6127F335A3002E7411 /* greenShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = greenShader.metal; sourceTree = "<group>"; };
 		EFAF2A6327F3362A002E7411 /* pulsingShader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pulsingShader.h; sourceTree = "<group>"; };
+		EFC504A727F5A8D000E0299C /* grassGreenShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = grassGreenShader.metal; sourceTree = "<group>"; };
+		EFC504AB27F5CBEB00E0299C /* grassWindModifier.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = grassWindModifier.metal; sourceTree = "<group>"; };
+		EFC504AD27F5D45A00E0299C /* MyARView+Coaching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyARView+Coaching.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +76,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF9E4CBC27F495B900A775E8 /* Metal */ = {
+			isa = PBXGroup;
+			children = (
+				EF9E4CB127F34F0900A775E8 /* MetalShaders.swift */,
+				EFAF2A6527F34306002E7411 /* Geometry Modifier */,
+				EFAF2A6427F342EE002E7411 /* Surface Shader */,
+			);
+			path = Metal;
+			sourceTree = "<group>";
+		};
+		EF9E4CBD27F495CC00A775E8 /* MyARView */ = {
+			isa = PBXGroup;
+			children = (
+				EFAF2A5927F32F73002E7411 /* MyARView.swift */,
+				EFAF2A5B27F332CD002E7411 /* MyARView+Configuration.swift */,
+				EFAF2A5D27F33361002E7411 /* MyARView+ARSessionDelegate.swift */,
+				EFC504AD27F5D45A00E0299C /* MyARView+Coaching.swift */,
+			);
+			path = MyARView;
+			sourceTree = "<group>";
+		};
+		EF9E4CBE27F495D900A775E8 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				EFAF2A4927F32F43002E7411 /* AppDelegate.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		EF9E4CBF27F495E300A775E8 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				EFAF2A4B27F32F43002E7411 /* ContentView.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
 		EFAF2A3D27F32F43002E7411 = {
 			isa = PBXGroup;
 			children = (
@@ -87,13 +132,10 @@
 		EFAF2A4827F32F43002E7411 /* shaderTestingEnvironment */ = {
 			isa = PBXGroup;
 			children = (
-				EFAF2A6527F34306002E7411 /* Geometry Modifier */,
-				EFAF2A6427F342EE002E7411 /* Surface Shader */,
-				EFAF2A4927F32F43002E7411 /* AppDelegate.swift */,
-				EFAF2A4B27F32F43002E7411 /* ContentView.swift */,
-				EFAF2A5927F32F73002E7411 /* MyARView.swift */,
-				EFAF2A5B27F332CD002E7411 /* MyARView+Configuration.swift */,
-				EFAF2A5D27F33361002E7411 /* MyARView+ARSessionDelegate.swift */,
+				EF9E4CBF27F495E300A775E8 /* Screen */,
+				EF9E4CBE27F495D900A775E8 /* Support */,
+				EF9E4CBD27F495CC00A775E8 /* MyARView */,
+				EF9E4CBC27F495B900A775E8 /* Metal */,
 				EFAF2A4F27F32F44002E7411 /* Assets.xcassets */,
 				EFAF2A5127F32F44002E7411 /* Preview Content */,
 			);
@@ -111,11 +153,8 @@
 		EFAF2A6427F342EE002E7411 /* Surface Shader */ = {
 			isa = PBXGroup;
 			children = (
-				EF9E4CB327F38A6100A775E8 /* wireframeShader.metal */,
-				EFAF2A5F27F33537002E7411 /* pulsingShader.metal */,
-				EFAF2A6327F3362A002E7411 /* pulsingShader.h */,
-				EFAF2A6127F335A3002E7411 /* greenShader.metal */,
-				EF9E4CB127F34F0900A775E8 /* MetalShaders.swift */,
+				EFC504A627F5A8C800E0299C /* Grass */,
+				EFC504A527F5A8BB00E0299C /* Focus Box */,
 			);
 			path = "Surface Shader";
 			sourceTree = "<group>";
@@ -123,10 +162,39 @@
 		EFAF2A6527F34306002E7411 /* Geometry Modifier */ = {
 			isa = PBXGroup;
 			children = (
+				EFC504AA27F5CBE000E0299C /* Grass */,
 				EF9E4CAD27F3434C00A775E8 /* triangleDancerModifier.metal */,
 				EF9E4CAF27F34DB600A775E8 /* expandingSquareModifier.metal */,
 			);
 			path = "Geometry Modifier";
+			sourceTree = "<group>";
+		};
+		EFC504A527F5A8BB00E0299C /* Focus Box */ = {
+			isa = PBXGroup;
+			children = (
+				EF9E4CB827F3A26F00A775E8 /* wireframeShader.metal */,
+				EF9E4CB327F38A6100A775E8 /* staticWireframeShader.metal */,
+				EFAF2A6127F335A3002E7411 /* greenShader.metal */,
+				EFAF2A5F27F33537002E7411 /* pulsingShader.metal */,
+				EFAF2A6327F3362A002E7411 /* pulsingShader.h */,
+			);
+			path = "Focus Box";
+			sourceTree = "<group>";
+		};
+		EFC504A627F5A8C800E0299C /* Grass */ = {
+			isa = PBXGroup;
+			children = (
+				EFC504A727F5A8D000E0299C /* grassGreenShader.metal */,
+			);
+			path = Grass;
+			sourceTree = "<group>";
+		};
+		EFC504AA27F5CBE000E0299C /* Grass */ = {
+			isa = PBXGroup;
+			children = (
+				EFC504AB27F5CBEB00E0299C /* grassWindModifier.metal */,
+			);
+			path = Grass;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,16 +269,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF9E4CB227F34F0900A775E8 /* MetalShaders.swift in Sources */,
-				EF9E4CB427F38A6100A775E8 /* wireframeShader.metal in Sources */,
+				EF9E4CB427F38A6100A775E8 /* staticWireframeShader.metal in Sources */,
 				EFAF2A6227F335A3002E7411 /* greenShader.metal in Sources */,
 				EFAF2A5E27F33361002E7411 /* MyARView+ARSessionDelegate.swift in Sources */,
 				EF9E4CAE27F3434C00A775E8 /* triangleDancerModifier.metal in Sources */,
+				EFC504A827F5A8D000E0299C /* grassGreenShader.metal in Sources */,
 				EFAF2A4C27F32F43002E7411 /* ContentView.swift in Sources */,
 				EF9E4CB027F34DB600A775E8 /* expandingSquareModifier.metal in Sources */,
 				EFAF2A5A27F32F73002E7411 /* MyARView.swift in Sources */,
 				EFAF2A6027F33537002E7411 /* pulsingShader.metal in Sources */,
 				EFAF2A5C27F332CD002E7411 /* MyARView+Configuration.swift in Sources */,
+				EFC504AC27F5CBEB00E0299C /* grassWindModifier.metal in Sources */,
 				EFAF2A4A27F32F43002E7411 /* AppDelegate.swift in Sources */,
+				EF9E4CB927F3A26F00A775E8 /* wireframeShader.metal in Sources */,
+				EFC504AE27F5D45A00E0299C /* MyARView+Coaching.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
