@@ -19,8 +19,6 @@ void staticWireframeShader(realitykit::surface_parameters params)
     
     params.surface().set_opacity(0.2);
     
-    params.surface().set_ambient_occlusion(0.7);
-    
     if (localPosition.x > 0.24)
     {
         params.surface().set_base_color(half3(0.094, 0.697, 0.088));
@@ -41,6 +39,7 @@ void staticWireframeShader(realitykit::surface_parameters params)
         params.surface().set_base_color(half3(0.094, 0.697, 0.088));
         params.surface().set_opacity(1);
     }
+    
 }
 
 

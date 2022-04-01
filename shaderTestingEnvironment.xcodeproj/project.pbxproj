@@ -24,6 +24,7 @@
 		EFC504A827F5A8D000E0299C /* grassGreenShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = EFC504A727F5A8D000E0299C /* grassGreenShader.metal */; };
 		EFC504AC27F5CBEB00E0299C /* grassWindModifier.metal in Sources */ = {isa = PBXBuildFile; fileRef = EFC504AB27F5CBEB00E0299C /* grassWindModifier.metal */; };
 		EFC504AE27F5D45A00E0299C /* MyARView+Coaching.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC504AD27F5D45A00E0299C /* MyARView+Coaching.swift */; };
+		EFC504B227F5F26000E0299C /* respondToCameraDistanceShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = EFC504B127F5F26000E0299C /* respondToCameraDistanceShader.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -63,6 +64,8 @@
 		EFC504A727F5A8D000E0299C /* grassGreenShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = grassGreenShader.metal; sourceTree = "<group>"; };
 		EFC504AB27F5CBEB00E0299C /* grassWindModifier.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = grassWindModifier.metal; sourceTree = "<group>"; };
 		EFC504AD27F5D45A00E0299C /* MyARView+Coaching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyARView+Coaching.swift"; sourceTree = "<group>"; };
+		EFC504B127F5F26000E0299C /* respondToCameraDistanceShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = respondToCameraDistanceShader.metal; sourceTree = "<group>"; };
+		EFC504B327F5F28A00E0299C /* respondToCameraDistanceShader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = respondToCameraDistanceShader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +188,8 @@
 			isa = PBXGroup;
 			children = (
 				EFC504A727F5A8D000E0299C /* grassGreenShader.metal */,
+				EFC504B127F5F26000E0299C /* respondToCameraDistanceShader.metal */,
+				EFC504B327F5F28A00E0299C /* respondToCameraDistanceShader.h */,
 			);
 			path = Grass;
 			sourceTree = "<group>";
@@ -273,6 +278,7 @@
 				EFAF2A6227F335A3002E7411 /* greenShader.metal in Sources */,
 				EFAF2A5E27F33361002E7411 /* MyARView+ARSessionDelegate.swift in Sources */,
 				EF9E4CAE27F3434C00A775E8 /* triangleDancerModifier.metal in Sources */,
+				EFC504B227F5F26000E0299C /* respondToCameraDistanceShader.metal in Sources */,
 				EFC504A827F5A8D000E0299C /* grassGreenShader.metal in Sources */,
 				EFAF2A4C27F32F43002E7411 /* ContentView.swift in Sources */,
 				EF9E4CB027F34DB600A775E8 /* expandingSquareModifier.metal in Sources */,

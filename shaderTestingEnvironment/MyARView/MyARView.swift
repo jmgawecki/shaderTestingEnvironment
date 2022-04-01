@@ -39,7 +39,6 @@ class MyARView: ARView {
         )
         
         scene.addAnchor(anchor!)
-        anchor?.addChild(occlusionBox)
         
         activateFocusBox()
     }
@@ -65,7 +64,7 @@ class MyARView: ARView {
         plane = ModelEntity(mesh: .generatePlane(width: 0.5, depth: 0.5))
         
         do {
-            if let material = try createCustomMaterialWithShader(shader: .staticWireframeShader) {
+            if let material = try createCustomMaterialWithShader(shader: .wireframeShader) {
                 plane?.model?.materials = [material]
             }
         } catch {
@@ -90,16 +89,15 @@ class MyARView: ARView {
                 grass.model?.materials = [SimpleMaterial(color: .green, isMetallic: false)]
             }
             
-            var finalTransform = Transform(matrix: raycastResult.worldTransform)
-            finalTransform.translation.y = 0.06
-            var growTransform = finalTransform
-            growTransform.translation.y = -grassHeight
+            let finalTransform = Transform(matrix: raycastResult.worldTransform)
+//            finalTransform.translation.y = 0.06
+//            var growTransform = finalTransform
+//            growTransform.translation.y = -grassHeight
             
-            grass.transform = growTransform
+            grass.transform = finalTransform
             grassField.append(grass)
             anchor?.addChild(grass)
-            
-            grass.move(to: finalTransform, relativeTo: occlusionBox, duration: 1)
+//            grass.move(to: finalTransform, relativeTo: occlusionBox, duration: 1)
         }
     }
     
